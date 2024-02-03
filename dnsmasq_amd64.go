@@ -11,7 +11,7 @@ func main() {
 	if os.Getenv("GOKRAZY_FIRST_START") == "1" {
 		os.Exit(0)
 	}
-	const frozenDir = "/usr/lib/x86_64-linux-gnu/nftables.frozen"
+	const frozenDir = "/usr/lib/x86_64-linux-gnu/dnsmasq.frozen"
 	dnsmasq := exec.Command(
 		frozenDir+"/ld-linux-x86-64.so.2",
 		append([]string{
